@@ -10,5 +10,5 @@
     (reduce
       next-denom
       {:remaining amount :change {}}
-      (sort > denominations))))
+      (sort > (set denominations)))))
 

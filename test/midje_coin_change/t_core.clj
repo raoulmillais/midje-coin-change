@@ -28,6 +28,13 @@
             5 1,
             10 1,
             25 0,
+            100 0})
+  (fact "it tolerates duplicate denominations"
+      (coin-change 40 [1 5 5 10 10 25 100])
+        => {1 0,
+            5 1,
+            10 1,
+            25 1,
             100 0}))
 
 (facts "about next-denom"
